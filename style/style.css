@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-family: "big shoulders display";
+  font-weight: 700;
+}
+
+p {
+  font-family: "lexend deca";
+  font-weight: 400;
+  font-size: 15px;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  min-height: calc(100vh - 14px);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0;
+}
+main img, main h2, main p {
+  padding: 0 15px;
+}
+main img {
+  margin: 30px;
+}
+main h2 {
+  color: #f2f2f2;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+main p {
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 30px 30px 30px;
+  line-height: 25px;
+}
+main .sedan h2, main .luxury h2, main .suv h2 {
+  text-transform: uppercase;
+}
+main .sedan {
+  background-color: #e38826;
+  border-radius: 10px 10px 0 0;
+}
+main .sedan button {
+  color: #e38826;
+}
+main .suv {
+  background-color: #006970;
+}
+main .suv button {
+  color: #006970;
+}
+main .luxury {
+  background-color: #004241;
+  border-radius: 0 0 10px 10px;
+}
+main .luxury button {
+  color: #004241;
+}
+main button {
+  margin: 0 45px 45px 45px;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+main button:hover {
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0 43px 43px 43px;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  main {
+    width: 70%;
+    flex-direction: row;
+    min-height: 450px;
+  }
+  main img {
+    width: 75px;
+  }
+  main .sedan, main .luxury, main .suv {
+    display: flex;
+    flex-direction: column;
+  }
+  main .sedan button:last-child, main .luxury button:last-child, main .suv button:last-child {
+    align-self: flex-start;
+    margin-top: auto;
+  }
+  main .sedan {
+    border-radius: 15px 0 0 15px;
+  }
+  main .luxury {
+    border-radius: 0 15px 15px 0;
+  }
+  main button {
+    align-self: flex-end;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

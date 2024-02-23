@@ -1,0 +1,164 @@
+// FONTS
+// lexend deca
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+// big shoulders display
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+// COLORS
+// primary
+$c-bright-orange: hsl(31, 77%, 52%);
+$c-dark-cyan: hsl(184, 100%, 22%);
+$c-very-dark-cyan : hsl(179, 100%, 13%);
+
+// neutral
+// paragraphs
+$c-transparent-white: hsla(0, 0%, 100%, 0.75);
+// background, headings, buttons
+$c-very-light-grey: hsl(0, 0%, 95%);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	font-family: "big shoulders display";
+	font-weight: 700;
+}
+
+p {
+	font-family: "lexend deca";
+	font-weight: 400;
+	font-size: 15px;
+}
+
+body {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main {
+	min-height: calc(100vh - 14px);
+	width: 90%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 50px 0;
+
+	img, h2, p {
+		
+		padding: 0 15px;
+	}
+
+	img {
+		margin: 30px;
+	}
+
+	h2 {
+		color: $c-very-light-grey;
+		margin-left: 30px;
+		margin-bottom: 30px;
+	}
+
+	p {
+		color: $c-transparent-white;
+		margin: 0 30px 30px 30px;
+		line-height: 25px;
+	}
+
+
+	.sedan, .luxury, .suv {
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+
+	.sedan {
+		background-color: $c-bright-orange;
+		border-radius: 10px 10px 0 0;
+		button {
+			color: $c-bright-orange;
+		}
+	}
+
+	.suv {
+		background-color: $c-dark-cyan;
+		button {
+			color: $c-dark-cyan;
+		}
+	}
+
+	.luxury {
+		background-color: $c-very-dark-cyan;
+		border-radius: 0 0 10px 10px;
+		button {
+			color: $c-very-dark-cyan;
+		}
+	}
+
+	button {
+		margin: 0 45px 45px 45px;
+		padding: 15px 30px;
+		border: none;
+		border-radius: 25px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	button:hover {
+		border: 1px solid $c-transparent-white;
+		background-color: hsla(0, 0%, 100%, 0);
+		color: $c-transparent-white;
+		margin: 0 43px 43px 43px;
+	}
+
+}
+
+@media only screen and (min-width: 600px) {
+
+	
+	body {
+		min-height: 100vh;
+		justify-content: center;
+	}
+
+	main {
+		width: 70%;
+		flex-direction: row;
+		min-height: 450px;
+
+		img {
+			width: 75px;
+		}
+
+
+		.sedan, .luxury, .suv {
+			display: flex;
+			flex-direction: column;
+			button:last-child {
+				align-self: flex-start;
+				margin-top: auto;
+			}
+		}
+	
+		.sedan {
+			border-radius: 15px 0 0 15px;
+		}
+
+		.luxury {
+			border-radius: 0 15px 15px 0;
+		}
+
+		button {
+			align-self: flex-end;
+		}
+	}
+
+	footer {
+		position: absolute;
+		bottom: 0;
+	}
+}
